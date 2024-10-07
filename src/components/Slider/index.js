@@ -13,9 +13,30 @@ export default function CustomSlider({ children, className, customSettings }) {
     slidesToScroll: 1,
     responsive: [
       {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 3.2, // Adjust for smaller screens (like tablets)
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 615,
+        settings: {
+          slidesToShow: 2.2, // Adjust for smaller screens (like tablets)
+          slidesToScroll: 1,
+        },
+      },
+      {
         breakpoint: 430,
         settings: {
           slidesToShow: 2.2, // Adjust for smaller screens (like tablets)
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 415,
+        settings: {
+          slidesToShow: 1.2, // Adjust for smaller screens (like tablets)
           slidesToScroll: 1,
         },
       },
