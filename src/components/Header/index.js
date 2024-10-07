@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import HamburgerIcon from "../Icons/HamburgerIcon";
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -16,15 +17,18 @@ const Header = () => {
   }, []);
 
   return (
-    <div className={`flex w-full justify-center fixed top-0 transition-colors duration-300`}>
+    <div className={`flex w-full justify-center fixed top-0 transition-colors duration-300 px-5 z-50`}>
       <div
-        className={`mx-auto ${
+        className={`min-h-[42px] mx-5 tablet:mx-auto ${
           isScrolled ? "menuGradient-scrolled" : "menuGradient bg-opacity-50"
-        } fixed top-[70px] min-w-[1245px] flex justify-between items-center rounded-[10px] px-[35px] py-4 transition-all`}
+        }  fixed top-[70px] left-0 right-0 tablet:max-w-[1245px] flex justify-between items-center rounded-[10px] px-[35px] py-4 transition-all`}
       >
-        <img src="/assets/lynx-icon.svg" className="absolute left-1/2 -translate-x-1/2" />
+        <img
+          src="/assets/lynx-icon.svg"
+          className="w-[45px] tablet:w-[40px] desktop:w-auto absolute left-0 tablet:left-1/2 tablet:-translate-x-1/2"
+        />
         <ul
-          className={`p-0 list-none flex justify-between items-center text-xs uppercase w-1/2 pr-[115px] transition-colors duration-300 ${
+          className={`hidden tablet:flex p-0 list-none justify-between items-center text-[8px] desktop:text-sm uppercase w-1/2 pr-[115px] transition-colors duration-300 ${
             isScrolled ? "text-[#070B36]" : "text-white"
           }`}
         >
@@ -39,7 +43,7 @@ const Header = () => {
           </li>
         </ul>
         <ul
-          className={`p-0 list-none flex justify-between items-center text-xs uppercase w-1/2 pl-[115px] transition-colors duration-300 ${
+          className={`hidden tablet:flex p-0 list-none justify-between items-center text-[8px] desktop:text-sm uppercase w-1/2 pl-[115px] transition-colors duration-300 ${
             isScrolled ? "text-[#070B36]" : "text-white"
           }`}
         >
@@ -53,6 +57,9 @@ const Header = () => {
             <a>Merch</a>
           </li>
         </ul>
+        <a href="#" className="block tablet:hidden absolute right-5">
+          <HamburgerIcon />
+        </a>
       </div>
     </div>
   );

@@ -1,7 +1,12 @@
 const HeroSection = () => {
   return (
-    <div className="h-[625px] tablet:h-[515px] desktop:h-[800px]">
-      <video className="max-w-none tablet:max-w-full h-full tablet:h-auto" autoPlay loop muted>
+    <div className="h-[625px] tablet:h-[515px] desktop:h-[800px] relative overflow-hidden">
+      <video
+        className="absolute left-0 top-0 right-0 bottom-0 max-w-none tablet:max-w-full h-full tablet:h-auto"
+        autoPlay
+        loop
+        muted
+      >
         <source src="/assets/header-video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
