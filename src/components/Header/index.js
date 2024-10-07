@@ -21,14 +21,14 @@ const Header = () => {
       <div
         className={`min-h-[42px] mx-5 tablet:mx-auto ${
           isScrolled ? "menuGradient-scrolled" : "menuGradient bg-opacity-50"
-        }  fixed top-[70px] left-0 right-0 tablet:min-w-[1245px] flex justify-between items-center rounded-[10px] px-[35px] py-4 transition-all`}
+        }  fixed top-[70px] left-0 right-0 tablet:max-w-[1245px] flex justify-between items-center rounded-[10px] px-[35px] py-4 transition-all`}
       >
         <img
           src="/assets/lynx-icon.svg"
-          className="w-[45px] tablet:w-auto absolute left-0 tablet:left-1/2 tablet:-translate-x-1/2"
+          className="w-[45px] tablet:w-[40px] desktop:w-auto absolute left-0 tablet:left-1/2 tablet:-translate-x-1/2"
         />
         <ul
-          className={`hidden tablet:flex p-0 list-none justify-between items-center text-xs uppercase w-1/2 pr-[115px] transition-colors duration-300 ${
+          className={`hidden tablet:flex p-0 list-none justify-between items-center text-[8px] desktop:text-sm uppercase w-1/2 pr-[115px] transition-colors duration-300 ${
             isScrolled ? "text-[#070B36]" : "text-white"
           }`}
         >
@@ -43,7 +43,7 @@ const Header = () => {
           </li>
         </ul>
         <ul
-          className={`hidden tablet:flex p-0 list-none justify-between items-center text-xs uppercase w-1/2 pl-[115px] transition-colors duration-300 ${
+          className={`hidden tablet:flex p-0 list-none justify-between items-center text-[8px] desktop:text-sm uppercase w-1/2 pl-[115px] transition-colors duration-300 ${
             isScrolled ? "text-[#070B36]" : "text-white"
           }`}
         >
