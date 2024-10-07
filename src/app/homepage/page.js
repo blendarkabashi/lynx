@@ -6,6 +6,7 @@ import OffersSection from "./containers/OffersSection";
 import ReviewsSection from "./containers/ReviewsSection";
 import InformationSection from "./containers/InformationSection";
 import MediaSection from "./containers/MediaSection";
+import ActivitiesSection from "./containers/ActivitiesSection";
 
 const Homepage = () => {
   return (
@@ -13,6 +14,7 @@ const Homepage = () => {
       <Header />
       <HeroSection />
       <InformationSection />
+      <ActivitiesSection />
       <OffersSection />
       <MediaSection />
       <ReviewsSection />
