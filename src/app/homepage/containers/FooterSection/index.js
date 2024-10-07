@@ -1,20 +1,27 @@
+import Facebook from "@/components/Icons/Facebook";
+import Instagram from "@/components/Icons/Instagram";
+import Twitter from "@/components/Icons/Twitter";
+
 const Footer = () => {
   return (
-    <footer className="bg-[#070B36] py-[130px]">
+    <footer className="bg-[#070B36] py-[130px] border-t border-t-[#F0F0C9]">
       <div className="flex flex-col tablet:flex-row text-[#F0F0C9] px-[48px] tablet:px-[70px] desktop:px-[157px] justify-between">
         {/* Logo Section - 30% width */}
-        <div className="w-full tablet:w-[30%] flex flex-col   tablet:items-start mb-[30px] tablet:mb-0">
+        <div className="w-full tablet:w-[30%]  flex flex-row justify-between tablet:justify-start items-center tablet:items-start tablet:flex-col  mb-[30px] tablet:mb-0">
           <img
             src="/assets/logo-text.svg"
             alt="Lynx Freeride Logo"
-            className="mb-4 w-[134px] tablet:w-[153px] desktop:w-[234px]"
+            className="mb-6 w-[134px] tablet:w-[153px] desktop:w-[234px]"
           />
           <div className="flex space-x-4">
             <a href="#" className="text-white hover:text-gray-400">
-              <i className="fab fa-facebook"></i>
+              <Facebook />
             </a>
             <a href="#" className="text-white hover:text-gray-400">
-              <i className="fab fa-instagram"></i>
+              <Twitter />
+            </a>
+            <a href="#" className="text-white hover:text-gray-400">
+              <Instagram />
             </a>
           </div>
         </div>
