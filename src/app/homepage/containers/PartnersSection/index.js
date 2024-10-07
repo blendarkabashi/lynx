@@ -1,27 +1,15 @@
 import Section from "@/components/Section";
 import React from "react";
 
-const PartnerLogo = ({ imgSrc, altText, size }) => {
-  const sizes = {
-    large: "h-[79px] tablet:h-[165px] desktop:h-[256px]",
-    small: "h-[43px] tablet:h-[90px] desktop:h-[140px] w-full",
-  };
-
-  //  const imgSizes = {
-  //    large: "w-[50px] tablet:w-[100px] desktop:w-[150px]", // Responsive width for large logos
-  //    small: "w-[30px] tablet:w-[60px] desktop:w-[90px]", // Responsive width for small logos
-  //  };
-
+const PartnerLogo = ({ imgSrc, altText, size, className }) => {
   return (
     <div
-      className={`flex flex-grow justify-center items-center ${sizes[size]} border border-[#F0F0C9] rounded-[10px] tablet:rounded-[20px] desktop:rounded-[20px]`}
-    >
-      <img
-        //className={`${imgSizes[size]}`} // Apply the responsive width classes
-        src={imgSrc}
-        alt={altText}
-      />
-    </div>
+      className={`partners ${size} ${className ?? ""}`}
+      style={{
+        backgroundImage: `url(${imgSrc})`,
+      }}
+      aria-label={altText}
+    ></div>
   );
 };
 
@@ -58,11 +46,13 @@ const PartnersSection = () => {
             imgSrc="/assets/partners/juniku.svg"
             altText="Juniku"
             size="small"
+            className="smaller"
           />
           <PartnerLogo
             imgSrc="/assets/partners/decani.svg"
             altText="Decani"
             size="small"
+            className="smaller"
           />
           <PartnerLogo
             imgSrc="/assets/partners/better-travel.svg"

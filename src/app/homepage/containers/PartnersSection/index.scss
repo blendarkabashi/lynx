@@ -1,2 +1,65 @@
 .partners {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #f0f0c9;
+  border-radius: 10px;
+
+  @media (min-width: 768px) {
+    border-radius: 20px;
+  }
+
+  @media (min-width: 1024px) {
+    border-radius: 20px;
+  }
+
+  &.large {
+    height: 79px;
+    background-size: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media (min-width: 768px) {
+      height: 165px;
+      background-size: 100px;
+    }
+
+    @media (min-width: 1024px) {
+      height: 256px;
+      background-size: 148px;
+    }
+  }
+
+  &.small {
+    height: 43px;
+    width: 100%;
+    background-size: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media (min-width: 768px) {
+      height: 90px;
+      background-size: 60px;
+    }
+
+    @media (min-width: 1024px) {
+      height: 140px;
+      background-size: 136px;
+    }
+  }
+
+  &.smaller {
+    background-size: 20px;
+
+    @media (min-width: 768px) {
+      height: 90px;
+      background-size: 50px;
+    }
+
+    @media (min-width: 1024px) {
+      height: 140px;
+      background-size: 77px;
+    }
+  }
 }
