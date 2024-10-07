@@ -2,11 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "/src/app/homepage/containers/PartnersSection/index.scss";
+
 .menuGradient {
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 40%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0.1) 59.5%);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.1) 40%,
+    rgba(255, 255, 255, 0.05) 50%,
+    rgba(255, 255, 255, 0.1) 59.5%
+  );
 }
 
-
-.menuGradient-scrolled{
-  background: linear-gradient(90deg, #FFFFFF 40%, rgba(255, 255, 255, 0.05) 50%, #FFFFFF 59.5%);
+.menuGradient-scrolled {
+  background: linear-gradient(
+    90deg,
+    #ffffff 40%,
+    rgba(255, 255, 255, 0.05) 50%,
+    #ffffff 59.5%
+  );
 }

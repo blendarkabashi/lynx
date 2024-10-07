@@ -27,9 +27,9 @@ const PartnerLogo = ({ imgSrc, altText, size }) => {
 
 const PartnersSection = () => {
   return (
-    <div className="h-[282px] tablet:h-[475px] desktop:h-[700px] bg-[#070B36] pt-[67px] pb-[72px]">
+    <div className="bg-[#070B36] pt-[67px] pb-[72px]">
       <Section>
-        <h2 className="text-[30px] leading-[35px] tracking-[-0.02em] text-center text-white mb-[30px]">
+        <h2 className="text-[30px] leading-[35px] tracking-[-0.02em] text-center text-white mb-[30px] font-[900]">
           OUR PARTNERS
         </h2>
 
