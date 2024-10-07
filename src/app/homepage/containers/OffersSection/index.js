@@ -1,9 +1,7 @@
 "use client";
 import Section from "@/components/Section";
-import React from "react";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
+import CustomSlider from "@/components/Slider";
+
 const offers = [
   {
     image: "/assets/offers/4-day-gjergjevica.png",
@@ -80,29 +78,10 @@ const offers = [
 ];
 
 const OffersSection = () => {
-  var settings = {
-    dots: false,
-    infinite: false,
-    arrows: false,
-    speed: 500,
-    slidesToShow: 4.2,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 430,
-        settings: {
-          slidesToShow: 2.2, // Adjust for smaller screens (like tablets)
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
-
   return (
     <div className="bg-[#070B36] pt-[67px] pb-[72px]">
       <Section className="!pr-0">
-        {/* <div className="flex space-x-8 overflow-y-"> */}
-        <Slider {...settings} className="flex space-x-8 overflow-y-">
+        <CustomSlider className="flex space-x-8 overflow-y-">
           {offers.map((offer, index) => (
             <div
               key={index}
@@ -115,9 +94,13 @@ const OffersSection = () => {
                 }}
               ></div>
               {/* Text on top of the image */}
-              <div className="absolute top-6 left-6 text-white text-lg font-semibold">{offer.title}</div>
+              <div className="absolute top-6 left-6 text-white text-lg font-semibold">
+                {offer.title}
+              </div>
 
-              <div className="absolute bottom-6 left-6 text-white text-lg font-semibold">{offer.subtitle}</div>
+              <div className="absolute bottom-6 left-6 text-white text-lg font-semibold">
+                {offer.subtitle}
+              </div>
 
               {/* Icon at the bottom-right */}
               <div className="absolute bottom-1 right-2 tablet:bottom-1 tablet:right-2 desktop:bottom-2 desktop:right-3">
@@ -129,8 +112,7 @@ const OffersSection = () => {
               </div>
             </div>
           ))}
-        </Slider>
-        {/* </div> */}
+        </CustomSlider>
       </Section>
     </div>
   );
