@@ -3,8 +3,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
-export default function CustomSlider({ children, className }) {
-  var settings = {
+export default function CustomSlider({ children, className, customSettings }) {
+  let settings = {
     dots: false,
     infinite: false,
     arrows: false,
@@ -21,6 +21,8 @@ export default function CustomSlider({ children, className }) {
       },
     ],
   };
+
+  if (customSettings) settings = customSettings;
 
   return (
     <Slider {...settings} className={className ?? ""}>

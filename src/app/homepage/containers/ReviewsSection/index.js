@@ -1,4 +1,5 @@
 import Section from "@/components/Section";
+import CustomSlider from "@/components/Slider";
 import React from "react";
 
 // ReviewCard component with avatar, name, title on the same row
@@ -23,7 +24,7 @@ const ReviewCard = ({ avatarSrc, name, title, review }) => {
   );
 };
 
-// ReviewsGrid component, all cards in one row on all screens
+// ReviewsGrid component, all cards in one row for tablet and desktop screens
 const ReviewsGrid = () => {
   const reviews = [
     {
@@ -31,26 +32,26 @@ const ReviewsGrid = () => {
       name: "Shaun White",
       title: "Professional Snowboarder.",
       review:
-        "Lorem ipsum dolor sit amet,  lobortis adipiscing elit. Maecenas lobortis nisi at est olutpat.",
+        "Lorem ipsum dolor sit amet, lobortis adipiscing elit. Maecenas lobortis nisi at est olutpat.",
     },
     {
       avatarSrc: "/assets/reviews/person2.jpeg",
       name: "Torah Bright",
       title: "Professional Snowboarder",
       review:
-        "Lorem ipsum dolor sit amet,  lobortis adipiscing elit. Maecenas lobortis nisi at est olutpat.",
+        "Lorem ipsum dolor sit amet, lobortis adipiscing elit. Maecenas lobortis nisi at est olutpat.",
     },
     {
       avatarSrc: "/assets/reviews/person1.jpeg",
-      name: "Traivs Rice",
+      name: "Travis Rice",
       title: "Professional Snowboarder",
       review:
-        "Lorem ipsum dolor sit amet,  lobortis adipiscing elit. Maecenas lobortis nisi at est olutpat.",
+        "Lorem ipsum dolor sit amet, lobortis adipiscing elit. Maecenas lobortis nisi at est olutpat.",
     },
   ];
 
   return (
-    <div className="flex space-x-6">
+    <div className="hidden tablet:flex space-x-6">
       {reviews.map((review, index) => (
         <ReviewCard
           key={index}
@@ -66,6 +67,48 @@ const ReviewsGrid = () => {
 
 // ReviewsSection with the background and review cards
 const ReviewsSection = () => {
+  const reviews = [
+    {
+      avatarSrc: "/assets/reviews/person1.jpeg",
+      name: "Shaun White",
+      title: "Professional Snowboarder.",
+      review:
+        "Lorem ipsum dolor sit amet, lobortis adipiscing elit. Maecenas lobortis nisi at est olutpat.",
+    },
+    {
+      avatarSrc: "/assets/reviews/person2.jpeg",
+      name: "Torah Bright",
+      title: "Professional Snowboarder",
+      review:
+        "Lorem ipsum dolor sit amet, lobortis adipiscing elit. Maecenas lobortis nisi at est olutpat.",
+    },
+    {
+      avatarSrc: "/assets/reviews/person1.jpeg",
+      name: "Travis Rice",
+      title: "Professional Snowboarder",
+      review:
+        "Lorem ipsum dolor sit amet, lobortis adipiscing elit. Maecenas lobortis nisi at est olutpat.",
+    },
+  ];
+
+  let settings = {
+    dots: false,
+    infinite: false,
+    arrows: false,
+    speed: 500,
+    slidesToShow: 2.2,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 430,
+        settings: {
+          slidesToShow: 1.2, // Adjust for smaller screens (like tablets)
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
   return (
     <div
       className="h-[472px] desktop:h-[732px] bg-cover bg-center pt-[40px] tablet:pt-[46px] desktop:pt-[72px] pb-[60px] desktop:pb-[94px]"
@@ -80,10 +123,23 @@ const ReviewsSection = () => {
           ABOUT <span className="text-[#004FFF]">LYNX.</span>
         </h2>
 
-        {/* ReviewsGrid with all cards at the end */}
-        <div className="flex justify-between">
-          <ReviewsGrid />
+        {/* Show slider only on mobile */}
+        <div className="tablet:hidden">
+          <CustomSlider customSettings={settings} className="flex space-x-8">
+            {reviews.map((review, index) => (
+              <ReviewCard
+                key={index}
+                avatarSrc={review.avatarSrc}
+                name={review.name}
+                title={review.title}
+                review={review.review}
+              />
+            ))}
+          </CustomSlider>
         </div>
+
+        {/* Show grid layout on tablet and desktop */}
+        <ReviewsGrid />
       </Section>
     </div>
   );
