@@ -3,7 +3,7 @@ import Section from "@/components/Section";
 const Footer = () => {
   return (
     <footer className="bg-[#070B36] py-[130px]">
-      <div className="flex flex-col tablet:flex-row text-white px-[48px] tablet:px-[70px] desktop:px-[157px] justify-between">
+      <div className="flex flex-col tablet:flex-row text-[#F0F0C9] px-[48px] tablet:px-[70px] desktop:px-[157px] justify-between">
         {/* Logo Section - 30% width */}
         <div className="w-full tablet:w-[30%] flex flex-col items-center tablet:items-start mb-[30px] tablet:mb-0">
           <img

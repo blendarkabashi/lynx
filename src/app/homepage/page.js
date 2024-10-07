@@ -3,6 +3,7 @@ import HeroSection from "./containers/HeroSection";
 import PartnersSection from "./containers/PartnersSection";
 import Footer from "./containers/FooterSection";
 import OffersSection from "./containers/OffersSection";
+import ReviewsSection from "./containers/ReviewsSection";
 
 const Homepage = () => {
   return (
@@ -10,6 +11,7 @@ const Homepage = () => {
       <Header />
       <HeroSection />
       <OffersSection />
+      <ReviewsSection />
       <PartnersSection />
       <Footer />
     </div>
