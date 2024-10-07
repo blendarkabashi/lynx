@@ -1,6 +1,9 @@
+"use client";
 import Section from "@/components/Section";
 import React from "react";
-
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 const offers = [
   {
     image: "/assets/offers/4-day-gjergjevica.png",
@@ -53,10 +56,19 @@ const offers = [
 ];
 
 const OffersSection = () => {
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+
   return (
     <div className="bg-[#070B36] pt-[67px] pb-[72px]">
       <Section>
-        <div className="flex space-x-8 overflow-y-">
+        {/* <div className="flex space-x-8 overflow-y-"> */}
+        <Slider {...settings} className="flex space-x-8 overflow-y-">
           {offers.map((offer, index) => (
             <div
               key={index}
@@ -69,13 +81,9 @@ const OffersSection = () => {
               }}
             >
               {/* Text on top of the image */}
-              <div className="absolute top-6 left-6 text-white text-lg font-semibold">
-                {offer.title}
-              </div>
+              <div className="absolute top-6 left-6 text-white text-lg font-semibold">{offer.title}</div>
 
-              <div className="absolute bottom-6 left-6 text-white text-lg font-semibold">
-                {offer.subtitle}
-              </div>
+              <div className="absolute bottom-6 left-6 text-white text-lg font-semibold">{offer.subtitle}</div>
 
               {/* Icon at the bottom-right */}
               <div className="absolute bottom-2 right-3">
@@ -83,7 +91,8 @@ const OffersSection = () => {
               </div>
             </div>
           ))}
-        </div>
+        </Slider>
+        {/* </div> */}
       </Section>
     </div>
   );

@@ -19,7 +19,7 @@ const Header = () => {
   return (
     <div className={`flex w-full justify-center fixed top-0 transition-colors duration-300 px-5 z-50`}>
       <div
-        className={`min-h-[42px] mx-5 tablet:mx-auto ${
+        className={`min-h-[42px] mx-5 desktop:mx-auto ${
           isScrolled ? "menuGradient-scrolled" : "menuGradient bg-opacity-50"
         }  fixed top-[70px] left-0 right-0 tablet:max-w-[1245px] flex justify-between items-center rounded-[10px] px-[35px] py-4 transition-all`}
       >
@@ -61,6 +61,7 @@ const Header = () => {
           <HamburgerIcon />
         </a>
       </div>
+      {/* <div className="bg-[url('/assets/mobile-menu-bg.svg')] bg-cover bg-no-repeat absolute left-0 right-0 bottom-0 top-0"></div> */}
     </div>
   );
 };
