@@ -5,21 +5,17 @@ import React from "react";
 // ReviewCard component with avatar, name, title on the same row
 const ReviewCard = ({ avatarSrc, name, title, review }) => {
   return (
-    <div className="bg-white p-8 rounded-lg shadow-md flex flex-col space-y-6 flex-1">
+    <div className="bg-white p-6 rounded-[20px] shadow-md flex flex-col space-y-6 flex-1">
       {/* Avatar, Name, and Title in the same row */}
       <div className="flex items-center space-x-4">
-        <img
-          src={avatarSrc}
-          alt={`${name}'s avatar`}
-          className="w-12 h-12 rounded-full object-cover"
-        />
+        <img src={avatarSrc} alt={`${name}'s avatar`} className="w-[65px] h-[65px] rounded-full object-cover" />
         <div>
           <h3 className="text-lg font-bold text-[#070B36]">{name}</h3>
           <p className="text-sm text-[#070B36]">{title}</p>
         </div>
       </div>
       {/* Review text */}
-      <p className="text-gray-600 text-sm leading-tight">{review}</p>
+      <p className="text-gray-600 text-sm leading-tight">"{review}"</p>
     </div>
   );
 };
@@ -31,22 +27,19 @@ const ReviewsGrid = () => {
       avatarSrc: "/assets/reviews/person1.jpeg",
       name: "Shaun White",
       title: "Professional Snowboarder.",
-      review:
-        "Lorem ipsum dolor sit amet, lobortis adipiscing elit. Maecenas lobortis nisi at est olutpat.",
+      review: "Lorem ipsum dolor sit amet, lobortis adipiscing elit. Maecenas lobortis nisi at est olutpat.",
     },
     {
       avatarSrc: "/assets/reviews/person2.jpeg",
       name: "Torah Bright",
       title: "Professional Snowboarder",
-      review:
-        "Lorem ipsum dolor sit amet, lobortis adipiscing elit. Maecenas lobortis nisi at est olutpat.",
+      review: "Lorem ipsum dolor sit amet, lobortis adipiscing elit. Maecenas lobortis nisi at est olutpat.",
     },
     {
       avatarSrc: "/assets/reviews/person1.jpeg",
       name: "Travis Rice",
       title: "Professional Snowboarder",
-      review:
-        "Lorem ipsum dolor sit amet, lobortis adipiscing elit. Maecenas lobortis nisi at est olutpat.",
+      review: "Lorem ipsum dolor sit amet, lobortis adipiscing elit. Maecenas lobortis nisi at est olutpat.",
     },
   ];
 
@@ -72,22 +65,19 @@ const ReviewsSection = () => {
       avatarSrc: "/assets/reviews/person1.jpeg",
       name: "Shaun White",
       title: "Professional Snowboarder.",
-      review:
-        "Lorem ipsum dolor sit amet, lobortis adipiscing elit. Maecenas lobortis nisi at est olutpat.",
+      review: "Lorem ipsum dolor sit amet, lobortis adipiscing elit. Maecenas lobortis nisi at est olutpat.",
     },
     {
       avatarSrc: "/assets/reviews/person2.jpeg",
       name: "Torah Bright",
       title: "Professional Snowboarder",
-      review:
-        "Lorem ipsum dolor sit amet, lobortis adipiscing elit. Maecenas lobortis nisi at est olutpat.",
+      review: "Lorem ipsum dolor sit amet, lobortis adipiscing elit. Maecenas lobortis nisi at est olutpat.",
     },
     {
       avatarSrc: "/assets/reviews/person1.jpeg",
       name: "Travis Rice",
       title: "Professional Snowboarder",
-      review:
-        "Lorem ipsum dolor sit amet, lobortis adipiscing elit. Maecenas lobortis nisi at est olutpat.",
+      review: "Lorem ipsum dolor sit amet, lobortis adipiscing elit. Maecenas lobortis nisi at est olutpat.",
     },
   ];
 
