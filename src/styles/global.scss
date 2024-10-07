@@ -2,9 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Default styles for both classes */
+@import "/src/app/homepage/containers/PartnersSection/index.scss";
+
 .menuGradient {
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 40%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0.1) 59.5%);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.1) 40%,
+    rgba(255, 255, 255, 0.05) 50%,
+    rgba(255, 255, 255, 0.1) 59.5%
+  );
 }
 
 .menuGradient-scrolled {
