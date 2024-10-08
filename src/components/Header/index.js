@@ -46,7 +46,7 @@ const HeaderMenu = ({ isScrolled }) => (
 );
 
 const MobileMenu = ({ setShowMenu }) => (
-  <div className="fixed inset-0 z-[100] bg-[#070B36] text-white flex flex-col p-[38px] overflow-y-auto">
+  <div className="fixed inset-0 z-[100] bg-[#070B36] text-white flex flex-col p-[38px] pt-[47px] overflow-y-auto">
     <div className="flex justify-between items-center mb-10">
       <img
         src="/assets/lynx-icon.svg"
