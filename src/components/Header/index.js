@@ -99,7 +99,7 @@ const Header = () => {
     if (showMenu) {
       document.body.style.overflow = "hidden"; // Disable scrolling
     } else {
-      document.body.style.overflow = ""; // Re
+      document.body.style.overflow = "";
     }
   }, [showMenu]);
 
