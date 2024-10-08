@@ -40,7 +40,7 @@ const MediaFeatureMobile = ({
 }) => (
   <div className="grid grid-cols-2 tablet:hidden gap-[10px] text-white">
     <div className="relative">
-      <h2 className="text-[25px] leading-[25px]  font-[900] mb-4 text-nowrap">
+      <h2 className="text-[18px] mobile:text-[25px] leading-[15px] mobile:leading-[25px]  font-[900] mb-4  text-nowrap">
         {title}
       </h2>
       <p className="text-[10px] font-[500]">{magazine}</p>
@@ -72,7 +72,7 @@ const MediaCard = ({ imgSrc, imgAlt, magazine, headline }) => (
 
 const MediaSection = () => {
   return (
-    <div className="bg-[#070B36] pt-[93px] pb-[97px]">
+    <div className="bg-no-repeat bg-cover bg-[url('/assets/information-bg.svg')] py-[55px] desktop:py-[100px]">
       <Section className="flex flex-col h-full justify-between">
         {/* Top Media Feature Section for Desktop/Tablet */}
         <MediaFeature
