@@ -2,8 +2,26 @@
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import { useEffect, useRef } from "react";
 
-export default function CustomSlider({ children, className, customSettings }) {
+export default function CustomSlider({
+  nextSlideTriggered,
+  setNextSlideTriggered,
+  children,
+  className,
+  customSettings,
+}) {
+  // Use useRef to get access to the Slider component instance
+  const sliderRef = useRef(null);
+
+  useEffect(() => {
+    if (nextSlideTriggered) {
+      // Call slickNext to go to the next slide
+      sliderRef.current.slickNext();
+      setNextSlideTriggered(false); // Reset trigger
+    }
+  }, [nextSlideTriggered, setNextSlideTriggered]);
+
   let settings = {
     dots: false,
     infinite: false,
@@ -53,7 +71,8 @@ export default function CustomSlider({ children, className, customSettings }) {
   if (customSettings) settings = customSettings;
 
   return (
-    <Slider {...settings} className={className ?? ""}>
+    // Pass the ref to the Slider component to get access to its methods
+    <Slider {...settings} className={className ?? ""} ref={sliderRef}>
       {children}
     </Slider>
   );
