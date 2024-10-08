@@ -1,0 +1,14 @@
+.slick-reviews {
+  .slick-slide {
+    div {
+      margin-right: 15px; // Margin for all child divs
+    }
+
+    // Remove margin from the last child
+    &:last-child {
+      div {
+        margin-right: 0; // No margin for the last child's div
+      }
+    }
+  }
+}
