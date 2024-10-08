@@ -1,6 +1,7 @@
 "use client";
 import Section from "@/components/Section";
 import CustomSlider from "@/components/Slider";
+import { useState } from "react";
 
 const offers = [
   {
@@ -78,19 +79,30 @@ const offers = [
 ];
 
 const OffersSection = () => {
+  const [nextSlideTriggered, setNextSlideTriggered] = useState(false);
   return (
     <div className="bg-[#070B36] pt-[67px] pb-[72px]">
-      {/* <Section className="w-full flex justify-end">
-        <svg width="21" height="15" viewBox="0 0 21 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <Section className="w-full flex justify-end mb-5">
+        <svg
+          onClick={() => setNextSlideTriggered(true)}
+          className="w-[10px] h-[10px] tablet:w-[20px] tablet:h-[20px] cursor-pointer"
+          viewBox="0 0 21 15"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
           <path
             d="M13.3527 13.6617C13.9027 14.2003 14.7837 14.1957 15.3279 13.6514L19.4758 9.50348C20.4521 8.52717 20.4522 6.94426 19.4758 5.96795L15.3279 1.82004C14.7837 1.27577 13.9027 1.27117 13.3527 1.80971C12.7946 2.35628 12.7899 3.25329 13.3423 3.80566L13.8841 4.34748C14.6163 5.0797 14.0978 6.33168 13.0622 6.33168L2.80283 6.33168C2.0274 6.33168 1.39879 6.96029 1.39879 7.73572C1.39879 8.51115 2.0274 9.13975 2.80283 9.13975L13.0622 9.13975C14.0978 9.13975 14.6163 10.3917 13.8841 11.124L13.3423 11.6658C12.7899 12.2181 12.7946 13.1152 13.3527 13.6617Z"
             fill="#F2BB05"
             stroke="#F2BB05"
           />
         </svg>
-      </Section> */}
+      </Section>
       <Section className="!pr-0">
-        <CustomSlider className="flex space-x-8 overflow-y-">
+        <CustomSlider
+          setNextSlideTriggered={setNextSlideTriggered}
+          nextSlideTriggered={nextSlideTriggered}
+          className="flex space-x-8 overflow-y-"
+        >
           {offers.map((offer, index) => (
             <div
               key={index}
