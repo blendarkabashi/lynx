@@ -16,9 +16,7 @@ const ReviewCard = ({ avatarSrc, name, title, review }) => {
           className="w-[43px] tablet:w-[50px] desktop:w-[65px] h-[43px] tablet:h-[50px] desktop:h-[65px] rounded-full object-cover"
         />
         <div>
-          <h3 className="group-hover:text-white text-[15px] desktop:text-[20px] font-bold text-[#070B36]">
-            {name}
-          </h3>
+          <h3 className="group-hover:text-white text-[15px] desktop:text-[20px] font-bold text-[#070B36]">{name}</h3>
           <p className="group-hover:text-white text-[8px] tablet:text-[10px] desktop:text-[15px] text-[#070B36]">
             {title}
           </p>
@@ -39,29 +37,19 @@ const ReviewsSection = () => {
       avatarSrc: "/assets/reviews/person1.jpeg",
       name: "Shaun White",
       title: "Professional Snowboarder.",
-      review:
-        "Lorem ipsum dolor sit amet, lobortis adipiscing elit. Maecenas lobortis nisi at est olutpat.",
+      review: "Lorem ipsum dolor sit amet, lobortis adipiscing elit. Maecenas lobortis nisi at est olutpat.",
     },
     {
       avatarSrc: "/assets/reviews/person2.jpeg",
       name: "Torah Bright",
       title: "Professional Snowboarder",
-      review:
-        "Lorem ipsum dolor sit amet, lobortis adipiscing elit. Maecenas lobortis nisi at est olutpat.",
+      review: "Lorem ipsum dolor sit amet, lobortis adipiscing elit. Maecenas lobortis nisi at est olutpat.",
     },
     {
       avatarSrc: "/assets/reviews/person1.jpeg",
       name: "Travis Rice",
       title: "Professional Snowboarder",
-      review:
-        "Lorem ipsum dolor sit amet, lobortis adipiscing elit. Maecenas lobortis nisi at est olutpat.",
-    },
-    {
-      avatarSrc: "/assets/reviews/person1.jpeg",
-      name: "Travis Rice",
-      title: "Professional Snowboarder",
-      review:
-        "Lorem ipsum dolor sit amet, lobortis adipiscing elit. Maecenas lobortis nisi at est olutpat.",
+      review: "Lorem ipsum dolor sit amet, lobortis adipiscing elit. Maecenas lobortis nisi at est olutpat.",
     },
   ];
 
