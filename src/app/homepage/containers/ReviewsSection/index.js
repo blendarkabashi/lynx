@@ -98,7 +98,7 @@ const ReviewsSection = () => {
         </h2>
 
         {/* Show slider only on mobile */}
-        <CustomSlider customSettings={settings} className="flex space-x-8">
+        <CustomSlider customSettings={settings} className="slick-reviews flex space-x-8">
           {reviews.map((review, index) => (
             <ReviewCard
               key={index}
