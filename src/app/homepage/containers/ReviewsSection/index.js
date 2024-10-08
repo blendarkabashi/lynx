@@ -1,6 +1,7 @@
 import Section from "@/components/Section";
 import CustomSlider from "@/components/Slider";
 import React from "react";
+import Y from "@/components/Icons/Y"; // Import the Y icon
 
 // ReviewCard component with avatar, name, title on the same row
 const ReviewCard = ({ avatarSrc, name, title, review }) => {
@@ -14,7 +15,9 @@ const ReviewCard = ({ avatarSrc, name, title, review }) => {
           className="w-[43px] tablet:w-[50px] desktop:w-[65px] h-[43px] tablet:h-[50px] desktop:h-[65px] rounded-full object-cover"
         />
         <div>
-          <h3 className="group-hover:text-white text-[15px] desktop:text-[20px] font-bold text-[#070B36]">{name}</h3>
+          <h3 className="group-hover:text-white text-[15px] desktop:text-[20px] font-bold text-[#070B36]">
+            {name}
+          </h3>
           <p className="group-hover:text-white text-[8px] tablet:text-[10px] desktop:text-[15px] text-[#070B36]">
             {title}
           </p>
@@ -35,19 +38,22 @@ const ReviewsSection = () => {
       avatarSrc: "/assets/reviews/person1.jpeg",
       name: "Shaun White",
       title: "Professional Snowboarder.",
-      review: "Lorem ipsum dolor sit amet, lobortis adipiscing elit. Maecenas lobortis nisi at est olutpat.",
+      review:
+        "Lorem ipsum dolor sit amet, lobortis adipiscing elit. Maecenas lobortis nisi at est olutpat.",
     },
     {
       avatarSrc: "/assets/reviews/person2.jpeg",
       name: "Torah Bright",
       title: "Professional Snowboarder",
-      review: "Lorem ipsum dolor sit amet, lobortis adipiscing elit. Maecenas lobortis nisi at est olutpat.",
+      review:
+        "Lorem ipsum dolor sit amet, lobortis adipiscing elit. Maecenas lobortis nisi at est olutpat.",
     },
     {
       avatarSrc: "/assets/reviews/person1.jpeg",
       name: "Travis Rice",
       title: "Professional Snowboarder",
-      review: "Lorem ipsum dolor sit amet, lobortis adipiscing elit. Maecenas lobortis nisi at est olutpat.",
+      review:
+        "Lorem ipsum dolor sit amet, lobortis adipiscing elit. Maecenas lobortis nisi at est olutpat.",
     },
   ];
 
@@ -85,7 +91,7 @@ const ReviewsSection = () => {
 
   return (
     <div
-      className="h-[472px] desktop:h-[732px] bg-cover bg-center pt-[40px] tablet:pt-[46px] desktop:pt-[72px] pb-[60px] desktop:pb-[94px]"
+      className="h-[472px] desktop:h-[732px] bg-cover bg-center pt-[40px] tablet:pt-[46px] desktop:pt-[72px] pb-[60px] desktop:pb-[94px] relative" // Add relative positioning here
       style={{
         backgroundImage: `url(/assets/reviews/reviews-bg.png)`,
       }}
@@ -98,7 +104,10 @@ const ReviewsSection = () => {
         </h2>
 
         {/* Show slider only on mobile */}
-        <CustomSlider customSettings={settings} className="slick-reviews flex space-x-8">
+        <CustomSlider
+          customSettings={settings}
+          className="slick-reviews flex space-x-8"
+        >
           {reviews.map((review, index) => (
             <ReviewCard
               key={index}
@@ -110,6 +119,8 @@ const ReviewsSection = () => {
           ))}
         </CustomSlider>
       </Section>
+      {/* Add the Y icon at the center bottom */}
+      <Y />
     </div>
   );
 };

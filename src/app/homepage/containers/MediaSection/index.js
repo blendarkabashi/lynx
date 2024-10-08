@@ -1,3 +1,4 @@
+import Y from "@/components/Icons/Y";
 import Section from "@/components/Section";
 import React from "react";
 
@@ -20,11 +21,13 @@ const MediaFeature = ({
       </div>
     </div>
     <div className="text-white col-span-1">
-      <p className="text-[10px] dektop:text-[15px] font-[500]">{magazine}</p>
-      <h2 className="text-[20px] dektop:text-[25px] font-[900] mb-2">
+      <p className="text-[10px] desktop:text-[15px] font-[500]">{magazine}</p>
+      <h2 className="text-[20px] desktop:text-[25px] font-[900] mb-2">
         {featureTitle}
       </h2>
-      <p className="text-[10px] dektop:text-[15px] font-[300]">{description}</p>
+      <p className="text-[10px] desktop:text-[15px] font-[300]">
+        {description}
+      </p>
     </div>
   </div>
 );
@@ -48,7 +51,7 @@ const MediaFeatureMobile = ({
       <p className="text-[8px] font-[300]">{description}</p>
     </div>
     <div>
-      <img src={imgSrc} alt={imgAlt} className=" rounded-lg" />
+      <img src={imgSrc} alt={imgAlt} className="rounded-lg" />
     </div>
   </div>
 );
@@ -72,7 +75,7 @@ const MediaCard = ({ imgSrc, imgAlt, magazine, headline }) => (
 
 const MediaSection = () => {
   return (
-    <div className="bg-no-repeat bg-cover bg-[url('/assets/information-bg.svg')] py-[55px] desktop:py-[100px]">
+    <div className="relative bg-no-repeat bg-cover bg-[url('/assets/information-bg.svg')] py-[55px] desktop:py-[100px]">
       <Section className="flex flex-col h-full justify-between">
         {/* Top Media Feature Section for Desktop/Tablet */}
         <MediaFeature
@@ -119,6 +122,9 @@ const MediaSection = () => {
           </div>
         </div>
       </Section>
+
+      {/* Y.svg positioned at the bottom middle */}
+      <Y bodyColor={"white"} />
     </div>
   );
 };

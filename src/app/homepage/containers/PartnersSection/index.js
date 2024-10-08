@@ -1,5 +1,6 @@
 import Section from "@/components/Section";
 import React from "react";
+import Y from "@/components/Icons/Y"; // Import the Y icon
 
 const PartnerLogo = ({ imgSrc, altText, size, className }) => {
   return (
@@ -15,9 +16,10 @@ const PartnerLogo = ({ imgSrc, altText, size, className }) => {
 
 const PartnersSection = () => {
   return (
-    <div className="bg-[#070B36] pt-[67px] pb-[72px]">
+    <div className="bg-[#070B36] pt-[67px] pb-[70px] tablet:pb-[100px] relative">
+      {/* Add relative positioning here */}
       <Section>
-        <h2 className="text-[30px] leading-[35px] tracking-[-0.02em] text-center text-white mb-[30px] font-[900]">
+        <h2 className="text-[25px] leading-[20px] tablet:text-[30px] tablet:leading-[35px] desktop:text-[45px] desktop:leading-[54px] tracking-[-0.02em] text-center text-white mb-[30px] font-[900]">
           OUR PARTNERS
         </h2>
 
@@ -66,6 +68,8 @@ const PartnersSection = () => {
           />
         </div>
       </Section>
+      {/* Add the Y icon at the center bottom */}
+      <Y bodyColor={"white"} />
     </div>
   );
 };

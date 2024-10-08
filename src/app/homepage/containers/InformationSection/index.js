@@ -1,10 +1,13 @@
 import Heading from "@/components/Heading";
 import Section from "@/components/Section";
 import React from "react";
+import Y from "@/components/Icons/Y"; // Import the Y icon
 
 const InformationSection = () => {
   return (
-    <div className="bg-no-repeat bg-cover bg-[url('/assets/information-bg.svg')] py-[55px] desktop:py-[100px]">
+    <div className="bg-no-repeat bg-cover bg-[url('/assets/information-bg.svg')] py-[55px] desktop:py-[100px] relative">
+      {" "}
+      {/* Add relative positioning here */}
       <Section>
         <div className="flex flex-col tablet:flex-row mb-[32px] tablet:mb-0">
           <div>
@@ -14,9 +17,11 @@ const InformationSection = () => {
               subtitle={"untamed wilderness"}
             />
             <p className="text-white text-[10px] desktop:text-[15px] font-extralight tracking-tighter desktop:tracking-normal">
-              A range so rugged that legend says it was created by the devil himself, the Accursed Mountains straddle
-              the border between Kosovo and Albania. Home to bears, wolves, and lynx, they’re wild, empty, and caked by
-              consistent snowfalls rolling in from the nearby Adriatic Sea.
+              A range so rugged that legend says it was created by the devil
+              himself, the Accursed Mountains straddle the border between Kosovo
+              and Albania. Home to bears, wolves, and lynx, they’re wild, empty,
+              and caked by consistent snowfalls rolling in from the nearby
+              Adriatic Sea.
             </p>
           </div>
           <img
@@ -36,13 +41,17 @@ const InformationSection = () => {
               subtitle={"Unparalleled snowfall"}
             />
             <p className="text-white text-[10px] desktop:text-[15px] font-extralight tracking-tighter desktop:tracking-normal">
-              The unique geographical position of the Accursed Mountains, with 2,500m-plus peaks less than 100km from
-              the coast, means we benefit from a maritime snowpack which delivers consistent dumps. It’s not uncommon to
-              get 12+ metres in a season here - enough to rival Japan.
+              The unique geographical position of the Accursed Mountains, with
+              2,500m-plus peaks less than 100km from the coast, means we benefit
+              from a maritime snowpack which delivers consistent dumps. It’s not
+              uncommon to get 12+ metres in a season here - enough to rival
+              Japan.
             </p>
           </div>
         </div>
       </Section>
+      {/* Add the Y icon at the center bottom */}
+      <Y bodyColor={"white"} />
     </div>
   );
 };

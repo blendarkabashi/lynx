@@ -1,4 +1,5 @@
 "use client";
+import Y from "@/components/Icons/Y";
 import Section from "@/components/Section";
 import CustomSlider from "@/components/Slider";
 
@@ -55,7 +56,7 @@ const offers = [
     image: "/assets/offers/7-day-hut.png",
     title: (
       <>
-        <span className="font-black">4 day</span> <br />
+        4 day <br />
         HUT TO HUT
         <br />
         SKI TOURING
@@ -79,7 +80,7 @@ const offers = [
 
 const OffersSection = () => {
   return (
-    <div className="bg-[#070B36] pt-[67px] pb-[72px]">
+    <div className="relative bg-[#070B36] pt-[67px] pb-[72px]">
       {/* <Section className="w-full flex justify-end">
         <svg width="21" height="15" viewBox="0 0 21 15" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -124,6 +125,9 @@ const OffersSection = () => {
           ))}
         </CustomSlider>
       </Section>
+
+      {/* Y.svg positioned at the bottom middle */}
+      <Y bodyColor={"white"} />
     </div>
   );
 };
