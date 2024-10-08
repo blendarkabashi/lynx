@@ -5,7 +5,7 @@ import React from "react";
 // ReviewCard component with avatar, name, title on the same row
 const ReviewCard = ({ avatarSrc, name, title, review }) => {
   return (
-    <div className="bg-white p-6 rounded-[20px] shadow-md flex flex-col space-y-[11px] desktop:space-y-5">
+    <div className="group bg-white p-6 rounded-[20px] shadow-md flex flex-col space-y-[11px] desktop:space-y-5 hover:bg-[#070B36] transition-all">
       {/* Avatar, Name, and Title in the same row */}
       <div className="flex items-center space-x-4">
         <img
@@ -14,12 +14,16 @@ const ReviewCard = ({ avatarSrc, name, title, review }) => {
           className="w-[43px] tablet:w-[50px] desktop:w-[65px] h-[43px] tablet:h-[50px] desktop:h-[65px] rounded-full object-cover"
         />
         <div>
-          <h3 className="text-[15px] desktop:text-[20px] font-bold text-[#070B36]">{name}</h3>
-          <p className="text-[8px] tablet:text-[10px] desktop:text-[15px] text-[#070B36]">{title}</p>
+          <h3 className="group-hover:text-white text-[15px] desktop:text-[20px] font-bold text-[#070B36]">{name}</h3>
+          <p className="group-hover:text-white text-[8px] tablet:text-[10px] desktop:text-[15px] text-[#070B36]">
+            {title}
+          </p>
         </div>
       </div>
       {/* Review text */}
-      <p className="text-[8px] tablet:text-[10px] desktop:text-[15px] text-gray-600 leading-tight">"{review}"</p>
+      <p className="group-hover:text-white text-[8px] tablet:text-[10px] desktop:text-[15px] text-gray-600 leading-tight">
+        "{review}"
+      </p>
     </div>
   );
 };
