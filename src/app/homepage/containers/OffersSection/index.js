@@ -7,7 +7,7 @@ const offers = [
     image: "/assets/offers/4-day-gjergjevica.png",
     title: (
       <>
-        7 day <br />
+        <span className="font-black">7 day</span> <br />
         CAT-SKIING
         <br />
         GJERAVICA
@@ -19,7 +19,7 @@ const offers = [
     image: "/assets/offers/4-day-hut.png",
     title: (
       <>
-        4 day <br />
+        <span className="font-black">4 day</span> <br />
         CAT-SKIING
         <br />
         GJERAVICA
@@ -31,7 +31,7 @@ const offers = [
     image: "/assets/offers/7-day-gjergjevica.png",
     title: (
       <>
-        7 day <br />
+        <span className="font-black">7 day</span> <br />
         HUT TO HUT
         <br />
         SKI TOURING
@@ -43,7 +43,7 @@ const offers = [
     image: "/assets/offers/7-day-hut.png",
     title: (
       <>
-        4 day <br />
+        <span className="font-black">4 day</span> <br />
         HUT TO HUT
         <br />
         SKI TOURING
@@ -55,7 +55,7 @@ const offers = [
     image: "/assets/offers/7-day-hut.png",
     title: (
       <>
-        4 day <br />
+        <span className="font-black">4 day</span> <br />
         HUT TO HUT
         <br />
         SKI TOURING
@@ -94,11 +94,11 @@ const OffersSection = () => {
                 }}
               ></div>
               {/* Text on top of the image */}
-              <div className="absolute top-6 left-6 text-white text-lg font-semibold">
+              <div className="uppercase absolute top-6 left-6 text-white text-[15px] tablet:text-[20px] desktop:text-[25px] font-semibold">
                 {offer.title}
               </div>
 
-              <div className="absolute bottom-6 left-6 text-white text-lg font-semibold">
+              <div className="absolute bottom-6 left-6 text-white text-lg tablet:text-[20px] desktop:text-[25px] font-semibold">
                 {offer.subtitle}
               </div>
 

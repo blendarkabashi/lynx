@@ -21,13 +21,13 @@ const InformationSection = () => {
           </div>
           <img
             className="w-full tablet:w-[470px] desktop:w-[720px] tablet:ml-[20px] desktop:ml-[30px] mt-[22px] tablet:mt-0"
-            src="/assets/information-img-1.svg"
+            src="/assets/information/information-img-1.png"
           />
         </div>
         <div className="flex flex-col tablet:flex-row -mt-2">
           <img
             className="order-2 tablet:order-1 w-full tablet:w-[470px] desktop:w-[720px] tablet:mr-[20px] desktop:mr-[30px] mt-[22px] tablet:mt-0"
-            src="/assets/information-img-2.svg"
+            src="/assets/information/information-img-2.png"
           />
           <div className="order-1 tablet:order-2 tablet:mt-12">
             <Heading
