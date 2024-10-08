@@ -87,7 +87,7 @@ const ReviewsSection = () => {
       }}
     >
       <Section className="flex flex-col h-full justify-between pr-0">
-        <h2 className="text-[30px] leading-[35px] text-white mb-[30px] font-[900] ">
+        <h2 className="text-[25px] tablet:text-[30px] tablet:leading-[35px] desktop:text-[45px] desktop:leading-[50px] leading-[30px] text-white mb-[30px] font-[900] ">
           WHAT THEY SAY
           <br />
           ABOUT <span className="text-[#004FFF]">LYNX.</span>
