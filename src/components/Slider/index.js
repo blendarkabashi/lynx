@@ -61,7 +61,21 @@ export default function CustomSlider({
       {
         breakpoint: 415,
         settings: {
-          slidesToShow: 1.2, // Adjust for smaller screens (like tablets)
+          slidesToShow: 2.1, // Adjust for smaller screens (like tablets)
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 395,
+        settings: {
+          slidesToShow: 1.9, // Adjust for smaller screens (like tablets)
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 360,
+        settings: {
+          slidesToShow: 1.6, // Adjust for smaller screens (like tablets)
           slidesToScroll: 1,
         },
       },
