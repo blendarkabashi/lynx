@@ -4,7 +4,7 @@ import Twitter from "@/components/Icons/Twitter";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#070B36] py-[130px] border-t border-t-[#F0F0C9]">
+    <footer className="bg-[#070B36] py-[50px] desktop:py-[130px] border-t border-t-[#F0F0C9]">
       <div className="flex flex-col tablet:flex-row text-[#F0F0C9] px-[48px] tablet:px-[70px] desktop:px-[157px] justify-between">
         {/* Logo Section - 30% width */}
         <div className="w-full tablet:w-[30%]  flex flex-row justify-between tablet:justify-start items-center tablet:items-start tablet:flex-col  mb-[30px] tablet:mb-0">
@@ -37,17 +37,13 @@ const Footer = () => {
           <div className="flex flex-row tablet:hidden desktop:hidden gap-10">
             {/* Left side - Newsletter */}
             <div className="flex-1 mb-4">
-              <p className="border border-dashed rounded p-1 mb-2">
-                Join our newsletter
-              </p>
+              <p className="border border-dashed rounded p-1 mb-2">Join our newsletter</p>
               <input
                 type="email"
                 placeholder="Enter your email"
                 className="mb-2 border w-full p-1 border-gray-300 rounded text-[#070B36] "
               />
-              <button className="p-2 bg-[#F0F0C9] text-[#070B36] rounded float-start">
-                Send
-              </button>
+              <button className="p-2 bg-[#F0F0C9] text-[#070B36] rounded float-start">Send</button>
             </div>
 
             {/* Right side - Links */}
