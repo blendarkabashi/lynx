@@ -9,9 +9,16 @@ export default function CustomSlider({ children, className, customSettings }) {
     infinite: false,
     arrows: false,
     speed: 500,
-    slidesToShow: 4.2,
+    slidesToShow: 5,
     slidesToScroll: 1,
     responsive: [
+      {
+        breakpoint: 1600,
+        settings: {
+          slidesToShow: 4.2, // Adjust for smaller screens (like tablets)
+          slidesToScroll: 1,
+        },
+      },
       {
         breakpoint: 800,
         settings: {

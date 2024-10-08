@@ -2,7 +2,7 @@ const HeroSection = () => {
   return (
     <div className="h-[625px] tablet:h-[515px] desktop:h-[800px] relative overflow-hidden">
       <video
-        className="absolute left-0 top-0 right-0 bottom-0 max-w-none tablet:max-w-full h-full tablet:h-auto"
+        className="absolute left-0 top-0 right-0 bottom-0 max-w-none tablet:max-w-full h-full tablet:h-auto tablet:w-full"
         autoPlay
         loop
         muted
