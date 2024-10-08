@@ -14,7 +14,7 @@ const ActivityInfo = ({ firstImage, secondImage, title, richtext, color, mobileI
         </div>
         <img className="hidden tablet:block tablet:w-[260px] desktop:w-[395px] w-full" src={secondImage} />
         <img className="block tablet:hidden w-full mt-5" src={mobileImage} />
-        <Button className="absolute right-[70px] bottom-[20px]" label="Learn More" />
+        <Button className="absolute learn-more-button" label="Learn More" />
       </Section>
     </div>
   );
