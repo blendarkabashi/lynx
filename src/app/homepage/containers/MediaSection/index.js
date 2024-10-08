@@ -14,7 +14,7 @@ const MediaFeature = ({
   <div className="hidden tablet:grid tablet:grid-cols-3 gap-[30px]">
     <div className="relative col-span-2">
       <img src={imgSrc} alt={imgAlt} className="w-full h-auto rounded-lg" />
-      <div className="absolute top-0 left-0">
+      <div className="absolute tablet:top-[-8px] desktop:top-0 left-0">
         <h2 className="text-[30px] desktop:text-[45px] leading-[45px] text-white font-[900]">
           {title}
         </h2>
