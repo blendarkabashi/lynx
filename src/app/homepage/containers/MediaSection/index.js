@@ -14,15 +14,17 @@ const MediaFeature = ({
     <div className="relative col-span-2">
       <img src={imgSrc} alt={imgAlt} className="w-full h-auto rounded-lg" />
       <div className="absolute top-0 left-0">
-        <h2 className="text-[45px] leading-[45px] text-white font-[900]">
+        <h2 className="text-[30px] desktop:text-[45px] leading-[45px] text-white font-[900]">
           {title}
         </h2>
       </div>
     </div>
     <div className="text-white col-span-1">
-      <p className="text-[15px] font-[500]">{magazine}</p>
-      <h2 className="text-[25px] font-[900] mb-2">{featureTitle}</h2>
-      <p className="text-[15px] font-[300]">{description}</p>
+      <p className="text-[10px] dektop:text-[15px] font-[500]">{magazine}</p>
+      <h2 className="text-[20px] dektop:text-[25px] font-[900] mb-2">
+        {featureTitle}
+      </h2>
+      <p className="text-[10px] dektop:text-[15px] font-[300]">{description}</p>
     </div>
   </div>
 );
@@ -59,8 +61,12 @@ const MediaCard = ({ imgSrc, imgAlt, magazine, headline }) => (
       alt={imgAlt}
       className="w-full h-[130px] tablet:h-auto rounded-lg"
     />
-    <p className="text-[10px] tablet:text-[15px] font-[500] my-4">{magazine}</p>
-    <h5 className="text-[15px] tablet:text-[25px] font-[900]">{headline}</h5>
+    <p className="text-[10px] desktop:text-[15px] font-[500] my-4">
+      {magazine}
+    </p>
+    <h5 className="text-[15px] tablet:text-[20px] desktop:text-[25px] font-[900]">
+      {headline}
+    </h5>
   </div>
 );
 
