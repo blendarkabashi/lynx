@@ -48,32 +48,14 @@ const HeaderMenu = ({ isScrolled }) => (
 const MobileMenu = ({ setShowMenu }) => (
   <div className="fixed inset-0 z-[100] bg-[#070B36] text-white flex flex-col p-[38px] pt-[47px] overflow-y-auto">
     <div className="flex justify-between items-center mb-10">
-      <img
-        src="/assets/lynx-icon.svg"
-        className="w-[45px] tablet:w-[40px] desktop:w-auto"
-      />
-      <a
-        href="#"
-        onClick={() => setShowMenu(false)}
-        className="block tablet:hidden"
-      >
+      <img src="/assets/lynx-icon.svg" className="w-[45px] tablet:w-[40px] desktop:w-auto" />
+      <a href="#" onClick={() => setShowMenu(false)} className="block tablet:hidden">
         <HamburgerIcon color="#F2BB05" />
       </a>
     </div>
     <ul className="flex flex-col items-center text-lg w-full space-y-10">
-      {[
-        "Cat Skiing",
-        "Ski Touring",
-        "Book a Trip",
-        "Summer",
-        "Info Pages",
-        "Merch",
-      ].map((label) => (
-        <PhoneMenuItem
-          key={label}
-          label={label}
-          onClick={() => setShowMenu(false)}
-        />
+      {["Cat Skiing", "Ski Touring", "Book a Trip", "Summer", "Info Pages", "Merch"].map((label) => (
+        <PhoneMenuItem key={label} label={label} onClick={() => setShowMenu(false)} />
       ))}
     </ul>
   </div>
@@ -106,24 +88,18 @@ const Header = () => {
   return (
     <>
       {/* Main header */}
-      <div
-        className={`flex w-full justify-center fixed top-0 transition-colors duration-300 px-5 z-50`}
-      >
+      <div className={`flex w-full justify-center fixed top-0 transition-colors duration-300 px-5 z-50`}>
         <div
-          className={`min-h-[42px] mx-5 desktop:mx-auto ${
+          className={`min-h-[42px] mx-5 tablet:mx-[30px] desktop:mx-[60px] xldesktop:max-w-[1480px] xldesktop:mx-auto ${
             isScrolled ? "menuGradient-scrolled" : "menuGradient bg-opacity-50"
-          }  fixed top-[70px] left-0 right-0 tablet:max-w-[1245px] flex justify-between items-center rounded-[10px] px-[35px] py-4 transition-all`}
+          }  fixed top-[70px] left-0 right-0 flex justify-between items-center rounded-[10px] px-[35px] py-4 transition-all`}
         >
           <img
             src="/assets/lynx-icon.svg"
             className="w-[45px] tablet:w-[40px] desktop:w-auto absolute left-0 tablet:left-1/2 tablet:-translate-x-1/2"
           />
           <HeaderMenu isScrolled={isScrolled} />
-          <a
-            href="#"
-            onClick={() => setShowMenu(true)}
-            className="block tablet:hidden absolute right-5"
-          >
+          <a href="#" onClick={() => setShowMenu(true)} className="block tablet:hidden absolute right-5">
             <HamburgerIcon />
           </a>
         </div>

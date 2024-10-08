@@ -10,6 +10,7 @@ module.exports = {
       mobile: "430px",
       tablet: "880px",
       desktop: "1360px",
+      xldesktop: "1600px",
     },
     extend: {
       colors: {
